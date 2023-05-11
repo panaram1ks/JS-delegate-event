@@ -95,11 +95,24 @@
       </table>
 
 
-        <div id="menu">
+        <div id="menu123">
             <button data-action="save">Сохранить</button>
             <button data-action="load">Загрузить</button>
             <button data-action="search">Поиск</button>
         </div>
+
+        Счётчик: <input type="button" value="1" data-counter>
+Ещё счётчик: <input type="button" value="2" data-counter>
+
+<script>
+  document.addEventListener('click', function(event) {
+
+    if (event.target.dataset.counter != undefined) { // если есть атрибут...
+      event.target.value++;
+    }
+
+  });
+</script>
 
       <script>
         class Menu {
@@ -128,7 +141,7 @@
           }
         }
       
-        new Menu(menu);
+        new Menu(menu123);
       </script>
 
 </body>
